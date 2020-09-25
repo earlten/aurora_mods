@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Inkmaster</name>
+        <description>The Inkmaster archetype homebrewed</description>
+        <author url="">Homebrewed</author>
+        <update version="0.0.2">
+            <file name="monk-Inkmaster.xml" url="" />
+        </update>
+    </info>
+    
+    <element name="Way of the Inkmaster" type="Archetype" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_WAY_OF_THE_Inkmaster">
+        <supports>Monastic Tradition</supports>
+        <description>
+            <p>Monks of the Way of the Inkmaster train relentlessly with their brushes and weapons, to the point where the brush and the weapon become an extension of the body. Founded on a mastery of sword fighting, the tradition has expanded to include many different weapons. A rare skill developed by artists who dabbled in the arcane was nothing more than a trival trick unless it was used in the hands of a skilled artist.  The technique was taught from person to person and only a few people alive are known to be able to enchant drawings that come to life.  These are know as Inkmasters.  They use their skills with art, blending magic with raw human energy know as ki in a way that binds the magic to the body of those that choose to adorn themselves with tattoos.</p>
+            <p class="indent">When you choose this tradition at 3rd level, your special martial arts training leads you to master the use of your tattoos as weapons. This path also includes instruction in the deft strokes of calligraphy or painting, and gives you the unique skills bonding ink to skin. You gain the following benefits.</p>
+            <div element="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster" />
+            <div element="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_ONE_WITH_THE_BLADE" />
+            <div element="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_SHARPEN_THE_BLADE" />
+            <div element="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_UNERRING_ACCURACY" />
+        </description>
+        <sheet>
+            <description><b>Masterful Artist</b> You gain the ability to transfer your own unique drawings to skin through magical means. You can spend 1 ki point to transfer any drawing to your own body or that of another person.  The tattoo may be static or simple movements. These tattoos can only be removed by you by spending 1 ki point. You may only tattoo a willing creature with skin (i.e. no fur, scales, plates, shells, etc.)</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster" level="3" />
+            <grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_ONE_WITH_THE_BLADE" level="6" />
+			<grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_MAGICAL_INK" level="6" />
+            <grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_SHARPEN_THE_BLADE" level="11" />
+            <grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_UNERRING_ACCURACY" level="17" />
+        </rules>
+    </element>
+    <element name="Way of the Inkmaster" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster">
+        <description>
+            <p>When you choose this tradition at 3rd level, your special martial arts training leads you to master the use of your tattoos as weapons. This path also includes instruction in the deft strokes of calligraphy or painting, and gives you the unique skills bonding ink to skin. You gain the following benefits</p>
+			<p><b>Embed Tattoos</b></p>
+            <p class="indent"><b><i>Brush Enthusiast. </i></b>You gain an addition proficiency in either calligrapher's supplies or painter's supplies</p>
+            <p class="indent"><b><i>Masterful Artist. </i></b>You gain the ability to transfer your own unique drawings to skin through magical means.  You can spend 1 ki point to transfer any drawing to your own body or that of another person.  The tattoo may be static or simple movements.  These tattoos can only be removed by you by spending 1 ki point.  You may only tattoo a willing creature with skin (i.e. no fur, scales, plates, shells, etc.)</p>
+			<p><b>Tattoo Weapons</b></p>			
+            <p class="indent"><b><i></i></b></p>
+            <p class="indent"><b><i>Weaponized Ink. </i></b>Choose two types of weapons to be your tattoo weapons: one melee weapon and one ranged weapon. Each of these weapons can be any simple or martial weapon that lacks the heavy and special properties. You gain proficiency with these weapons if you don’t already have it. Weapons of the chosen types are monk weapons for you. Many of this tradition’s features work only with your tattoo weapons. When you reach 6th, 11th, and 17th level in this class, you can choose another type of weapon—either melee or ranged—to be a tattoo weapon for you following the criteria above.  As part of your attack action, or as a bonus action, you can manifest your tattoo into a physical weapon that you hold.  The weapon has the same stat blocks as its non-tattoo counterpart.  You can change the type of weapon you hold If you “drop” your weapon, it puddles on the floor becoming an inert liquid ink until you can spend an action absorbing the ink again.</p>
+            <p class="indent"><b><i>Agile Parry. </i></b>If you make an unarmed strike as part of the Attack action on your turn and have manifested your tattoo weapon, you can use it to defend yourself if it is a melee weapon. You gain a +2 bonus to AC until the start of your next turn, while the weapon is in your hand and you aren't incapacitated.</p>
+            <p class="indent"><b><i>Inkmaster’s Shot. </i></b>You can use a bonus action on your turn to make your ranged attacks with a ranged tattoo weapon more deadly. When you do so, any target you hit with a ranged attack using a tattoo weapon takes an extra 1d4 damage of the weapons type. You retain this benefit until the end of the current turn.</p>
+        </description>
+        <sheet>
+            <description>Your Inkmaster weapons are monk weapons.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Way of the Brush (Inkmaster)" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_PAINTERS_SUPPLIES"/>
+            <select type="Archetype Feature" name="Inkmaster Weapon, Melee" supports="Inkmaster Weapon,Melee" level="3" />
+            <select type="Archetype Feature" name="Inkmaster Weapon, Ranged" supports="Inkmaster Weapon,Ranged" level="3" />
+            <select type="Archetype Feature" name="Inkmaster Weapon, 6" supports="Inkmaster Weapon,(Melee||Ranged)" level="6" />
+            <select type="Archetype Feature" name="Inkmaster Weapon, 11" supports="Inkmaster Weapon,(Melee||Ranged)" level="11" />
+            <select type="Archetype Feature" name="Inkmaster Weapon, 17" supports="Inkmaster Weapon,(Melee||Ranged)" level="17" />
+			<grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster_AGILE_PARRY" />
+			<grant type="Archetype Feature" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster_InkmasterS_SHOT" />
+        </rules>
+    </element>
+	<element name="Agile Parry" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster_AGILE_PARRY">
+		<requirements>ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster</requirements>
+		<description>
+			<p>If you make an unarmed strike as part of the Attack action on your turn and have manifested your tattoo weapon, you can use it to defend yourself if it is a melee weapon. You gain a +2 bonus to AC until the start of your next turn, while the weapon is in your hand and you aren't incapacitated.</p>
+		</description>
+		<sheet usage="Inkmaster Weapon">
+			<description>If you make an unarmed strike as part of the Attack action on your turn and have manifested your tattoo weapon, you can use it to defend yourself if it is a melee weapon. You gain a +2 bonus to AC until the start of your next turn, while the weapon is in your hand and you aren't incapacitated.</description>
+		</sheet>
+	</element>
+	<element name="Inkmaster’s Shot" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster_InkmasterS_SHOT">
+		<requirements>ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_PATH_OF_THE_Inkmaster</requirements>
+		<description>
+			<p>You can use a bonus action on your turn to make your ranged attacks with a ranged tattoo weapon more deadly. When you do so, any target you hit with a ranged attack using a tattoo weapon takes an extra 1d4 damage of the weapons type. You retain this benefit until the end of the current turn.</p>
+		</description>
+		<sheet action="Bonus Action" usage="Inkmaster Weapon">
+			<description>Until the end of the current turn, any target you hit with a ranged attack using a Inkmaster weapon takes an extra 1d4 damage of the weapons type.</description>
+		</sheet>
+	</element>
+    <element name="One with the Blade" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_ONE_WITH_THE_BLADE">
+        <description>
+            <p>At 6th level, you extend your ki into your tattoo weapons, granting you the following benefits</p>
+            <p class="indent"><b><i>Magic Tattoo Weapons. </i></b>Your attacks with your tattoo weapons count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</p>
+            <p class="indent"><b><i>Deft Strike. </i></b>When you hit a target with a tattoo weapon, you can spend 1 ki point to cause the weapon to deal extra damage to the target equal to your Martial Arts die. You can use this feature only once on each of your turns.</p>
+        </description>
+        <sheet usage="1/Turn">
+            <description>Attacks with Inkmaster weapons are considered magical. When you hit a target with a Inkmaster weapon, spend 1 ki point to cause an extra {{martial arts:dice}} damage.</description>
+        </sheet>
+    </element>
+    <element name="Magical Ink" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_MAGICAL_INK">
+        <description>
+            <p>At 6th level, you developed the skills necessary to apply magical tattoos to others in addition to yourself.  Follow the rules per the UA:Tattoos for applying tattoos.  Tattoos require attunement.  Per the tattoo table, half of the listed time is spent drawing the tattoo, the other half of the time is spent attuning to the tattoo.  If tattooing others, both parties must spend half the time to attune to the tattoo, but it is bonded only to the person being tattooed.</p>
+			<p>Magical tattoo designs can be found or enchanted by arcane means.  A spell scroll can be inscribed into a unique drawing of your own and then transferred to the skin as a tattoo.</p>
+            </description>
+        <sheet usage="1/Turn">
+            <description>Attacks with Inkmaster weapons are considered magical. When you hit a target with a Inkmaster weapon, spend 1 ki point to cause an extra {{martial arts:dice}} damage.</description>
+        </sheet>
+    </element>
+    <element name="Sharpen the Blade" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_SHARPEN_THE_BLADE">
+        <description>
+            <p>At 11th level, you gain the ability to augment your monk weapons further with your ink. As a bonus action, you can expend up to 3 ki points to grant one monk weapon you wield a bonus to attack and damage rolls when you attack with it. The bonus equals the number of ki points you spent. This bonus lasts for 1 minute or until you use this feature again. This feature has no effect on other magical weapons you wield.</p>
+        </description>
+        <sheet action="Bonus Action" usage="Ki">
+            <description>Expend up to 3 ki point to grant one Inkmaster weapon you touch a bonus to attack and damage, equal to the ki points spent, for 1 minute. (no effect on magic weapons that already have a bonus)</description>
+        </sheet>
+    </element>
+    <element name="Unerring Accuracy" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_UNERRING_ACCURACY">
+        <description>
+            <p>At 17th level, your mastery of weapons grants you extraordinary accuracy. If you miss with an attack roll using a monk weapon on your turn, you can reroll it. You can use this feature only once on each of your turns.</p>
+        </description>
+        <sheet usage="1/Turn">
+            <description>Reroll if you miss with a monk weapon.</description>
+        </sheet>
+    </element>
+
+    
+	<!-- Inkmaster Weapons -->    
+	<element name="Inkmaster Weapon (Club)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_CLUB">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_CLUB" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Dagger)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_DAGGER">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_DAGGER" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Greatclub)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_GREATCLUB">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATCLUB" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Handaxe)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_HANDAXE">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_HANDAXE" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Javelin)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_JAVELIN">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_JAVELIN" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Light Hammer)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_LIGHTHAMMER">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LIGHT_HAMMER" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Mace)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_MACE">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MACE" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Quarterstaff)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_QUARTERSTAFF">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_QUARTERSTAFF" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Sickle)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SICKLE">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SICKLE" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Spear)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SPEAR">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Crossbow, Light)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_CROSSBOW_LIGHT">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_CROSSBOW_LIGHT" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Dart)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_DART">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_DART" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Shortbow)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SHORTBOW">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Sling)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SLING">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SLING" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Battleaxe)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_BATTLEAXE">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BATTLEAXE" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Flail)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_FLAIL">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_FLAIL" />
+		</rules>
+	</element>
+	<!-- <element name="Inkmaster Weapon (Glaive)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_GLAIVE">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GLAIVE" />
+		</rules>
+	</element> -->
+	<!-- <element name="Inkmaster Weapon (Greataxe)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_GREATAXE">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATAXE" />
+		</rules>
+	</element> -->
+	<!-- <element name="Inkmaster Weapon (Greatsword)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_GREATSWORD">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATSWORD" />
+		</rules>
+	</element> -->
+	<!-- <element name="Inkmaster Weapon (Halberd)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_HALBERD">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_HALBERD" />
+		</rules>
+	</element> -->
+	<!-- <element name="Inkmaster Weapon (Lance)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_LANCE">
+		<supports>Inkmaster Weapon, Melee, Special</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LANCE" />
+		</rules>
+	</element> -->
+	<element name="Inkmaster Weapon (Longsword)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_LONGSWORD">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGSWORD" />
+		</rules>
+	</element>
+	<!-- <element name="Inkmaster Weapon (Maul)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_MAUL">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MAUL" />
+		</rules>
+	</element> -->
+	<element name="Inkmaster Weapon (Morningstar)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_MORNINGSTAR">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MORNINGSTAR" />
+		</rules>
+	</element>
+	<!-- <element name="Inkmaster Weapon (Pike)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_PIKE">
+		<supports>Inkmaster Weapon, Melee, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_PIKE" />
+		</rules>
+	</element> -->
+	<element name="Inkmaster Weapon (Rapier)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_RAPIER">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_RAPIER" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Scimitar)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SCIMITAR">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SCIMITAR" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Shortsword)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_SHORTSWORD">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Trident)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_TRIDENT">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_TRIDENT" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (War Pick)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_WAR_PICK">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WAR_PICK" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Warhammer)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_WARHAMMER">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARHAMMER" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Whip)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_WHIP">
+		<supports>Inkmaster Weapon, Melee</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WHIP" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Blowgun)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_BLOWGUN">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_BLOWGUN" />
+		</rules>
+	</element>
+	<element name="Inkmaster Weapon (Crossbow, Hand)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_CROSSBOW_HAND">
+		<supports>Inkmaster Weapon, Ranged</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_CROSSBOW_HAND" />
+		</rules>
+	</element>
+	<!-- <element name="Inkmaster Weapon (Crossbow, Heavy)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_CROSSBOW_HEAVY">
+		<supports>Inkmaster Weapon, Ranged, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_CROSSBOW_HEAVY" />
+		</rules>
+	</element> -->
+	<element name="Inkmaster Weapon (Longbow)" type="Archetype Feature" source="Homebrewed" id="ID_HOMEBREW_ARCHETYPE_FEATURE_Inkmaster_WEAPON_LONGBOW">
+		<supports>Inkmaster Weapon, Ranged, Heavy</supports>
+        <description>
+			<p>You gain proficiency with this weapon if you don’t already have it, and it is a monk weapon for you.</p>
+        </description>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGBOW" />
+		</rules>
+	</element>
+</elements>
